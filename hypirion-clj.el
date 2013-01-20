@@ -1,0 +1,37 @@
+(require 'clojure-mode)
+
+(dolist (mode '(clojure-mode-hook nrepl-mode-hook))
+  (add-hook mode 'enable-paredit-mode))
+
+(define-clojure-indent
+  (defroutes 'defun)
+  (GET 2)
+  (POST 2)
+  (PUT 2)
+  (DELETE 2)
+  (HEAD 2)
+  (ANY 2)
+  (context 2))
+
+(lambda-as-lambda 'clojure-mode "(\\(\\<fn\\>\\)")
+
+;; Auto-completion for Clojure
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(ac-config-default)
+
+(require 'ac-nrepl)
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'nrepl-mode))
+
+;; TODO: Something here's making emacs slow at shutting down. I suspect it's the
+;; ac here.
+
+;; Fix nRepl keybindings which override paredit's
+(add-hook 'clojure-mode-hook
+          (lambda () (define-key clojure-mode-map (kbd "DEL")
+                  'paredit-backward-delete)))
+
+(provide 'hypirion-clj)
