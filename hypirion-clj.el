@@ -1,5 +1,7 @@
 (require 'clojure-mode)
 
+(define-key clojure-mode-map (kbd "RET") 'newline-and-indent)
+
 (dolist (mode '(clojure-mode-hook nrepl-mode-hook))
   (add-hook mode 'enable-paredit-mode))
 
