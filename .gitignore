@@ -1,0 +1,10 @@
+\#*
+*~
+.session
+tramp
+bookmarks
+swank/*
+elpa/*
+auto-save-list/*
+url/*
+ac-comphist.dat
