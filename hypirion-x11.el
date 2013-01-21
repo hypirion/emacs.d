@@ -1,5 +1,6 @@
 ;; Default font - (Seems to work properly)
-(set-face-attribute 'default "Inconsolata-13")
+(if (member "Inconsolata" (font-family-list))
+    (set-face-attribute 'default nil :font "Inconsolata-12"))
 
 ;; Solarized light
 (load-theme 'solarized-light t)
