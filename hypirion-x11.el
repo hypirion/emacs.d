@@ -7,12 +7,12 @@
 ;; Remove that darn bell sound
 (setq visible-bell t)
 
-;; Maximize frame size
+;; Maximize frame height
 (defun set-preferred-size (frame)
   (if window-system
-      (set-frame-size frame 80 72)))
-;; TODO - make 72 some value which suits nicely for any window
-
+      (set-frame-size frame 80
+                      (/ (- (x-display-pixel-height) 55)
+                         (frame-char-height)))))
 (set-preferred-size (selected-frame))
 
 (add-hook 'after-make-frame-functions 'set-preferred-size)
