@@ -28,9 +28,6 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 
-;; TODO: Something here's making emacs slow at shutting down. I suspect it's the
-;; ac here.
-
 ;; Fix nRepl keybindings which override paredit's
 (add-hook 'clojure-mode-hook
           (lambda () (define-key clojure-mode-map (kbd "DEL")
