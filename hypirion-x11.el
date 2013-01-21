@@ -2,8 +2,8 @@
 (if (member "Inconsolata" (font-family-list))
     (set-face-attribute 'default nil :font "Inconsolata-12"))
 
-;; Solarized light
-(load-theme 'solarized-light t)
+;; Zenburn
+(load-theme 'zenburn t)
 
 ;; Remove that darn bell sound
 (setq visible-bell t)
