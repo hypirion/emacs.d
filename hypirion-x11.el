@@ -18,4 +18,7 @@
 
 (add-hook 'after-make-frame-functions 'set-preferred-size)
 
+(require 'windmove)
+(windmove-default-keybindings 'super)
+
 (provide 'hypirion-x11)
