@@ -56,4 +56,9 @@
 (autoload 'markdown-mode "markdown-mode" "Markdown Mode." t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(defun magit-fill-column ()
+  (setq fill-column 72))
+
+(add-hook 'magit-log-edit-mode-hook 'magit-fill-column)
+
 (provide 'hypirion-text)
