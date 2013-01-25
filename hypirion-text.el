@@ -26,7 +26,8 @@
         (when (or (< arg 0) (not (eobp)))
           (transpose-lines arg))
         (forward-line -1))
-      (move-to-column column t)))))
+      (move-to-column column t)
+      (indent-for-tab-command)))))
 
 (defun move-text-down (arg)
   "Move region (transient-mark-mode active) or current line
