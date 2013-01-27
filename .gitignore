@@ -5,6 +5,7 @@ tramp
 bookmarks
 swank/*
 elpa/*
+eshell/*
 auto-save-list/*
 url/*
 ac-comphist.dat
