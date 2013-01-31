@@ -19,6 +19,9 @@
 (add-hook 'after-make-frame-functions 'set-preferred-size)
 
 (require 'windmove)
-(windmove-default-keybindings 'super)
+(global-set-key (kbd "S-b") 'windmove-left)
+(global-set-key (kbd "S-f") 'windmove-right)
+(global-set-key (kbd "S-p") 'windmove-up)
+(global-set-key (kbd "S-n") 'windmove-down)
 
 (provide 'hypirion-x11)
