@@ -15,6 +15,9 @@
 ;; Never ever have tabs
 (setq-default indent-tabs-mode nil)
 
+;; Turn on column number mode
+(setq column-number-mode t)
+
 ;; put paths onto load path to load *.el files from them
 (add-to-list 'load-path "~/.emacs.d/")
 
