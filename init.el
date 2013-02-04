@@ -34,6 +34,7 @@
                 hypirion-clisp
                 hypirion-clj
                 hypirion-elisp
+                hypirion-erlang
                 hypirion-magit
                 hypirion-text
                 hypirion-x11))
