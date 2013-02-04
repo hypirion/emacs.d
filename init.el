@@ -15,8 +15,10 @@
 ;; Never ever have tabs
 (setq-default indent-tabs-mode nil)
 
-;; Turn on column number mode
+(setq sentence-end-double-space nil)
+(setq-default tab-width 2)
 (setq column-number-mode t)
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; put paths onto load path to load *.el files from them
 (add-to-list 'load-path "~/.emacs.d/")
