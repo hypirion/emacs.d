@@ -30,11 +30,13 @@
   (add-to-list 'package-archives source))
 (package-initialize)
 
-(dolist (package '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang
-                                auto-complete gnuplot highlight-parentheses
-                                magit))
-  (or (package-installed-p package)
-      (package-install package)))
+(defvar my-packages
+  '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang auto-complete
+                 gnuplot highlight-parentheses magit go-mode))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+      (package-install p)))
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
