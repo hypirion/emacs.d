@@ -30,6 +30,10 @@
   (add-to-list 'package-archives source))
 (package-initialize)
 
+(dolist (package '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang))
+  (or (package-installed-p package)
+      (package-install package)))
+
 (dolist (file '(hypirion-defuns
                 hypirion-parens
                 hypirion-c
