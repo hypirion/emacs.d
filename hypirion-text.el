@@ -41,8 +41,8 @@
   (interactive "*p")
   (move-text-internal (- arg)))
 
-(global-set-key [M-S-up] 'move-text-up)
-(global-set-key [M-S-down] 'move-text-down)
+(global-set-key (kbd "M-s-p") 'move-text-up)
+(global-set-key (kbd "M-s-n") 'move-text-down)
 
 ;; Add DOING and CANCELLED as org-mode-elements
 (setq org-todo-keywords
