@@ -30,7 +30,9 @@
   (add-to-list 'package-archives source))
 (package-initialize)
 
-(dolist (package '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang))
+(dolist (package '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang
+                                auto-complete gnuplot highlight-parentheses
+                                magit))
   (or (package-installed-p package)
       (package-install package)))
 
