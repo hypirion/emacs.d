@@ -62,4 +62,8 @@
 
 (add-hook 'magit-log-edit-mode-hook 'magit-fill-column)
 
+;; hook in gnuplot mode when editing
+(require 'gnuplot)
+(add-to-list 'auto-mode-alist '("\\.\\(gp\\|gnuplot\\)$" . gnuplot-mode))
+
 (provide 'hypirion-text)
