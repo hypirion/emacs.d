@@ -9,3 +9,6 @@ eshell/*
 auto-save-list/*
 url/*
 ac-comphist.dat
+/abbrev_defs
+cedet-*/*
+jdee-*/*
