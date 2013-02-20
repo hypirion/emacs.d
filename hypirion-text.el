@@ -66,4 +66,7 @@
 (require 'gnuplot)
 (add-to-list 'auto-mode-alist '("\\.\\(gp\\|gnuplot\\)$" . gnuplot-mode))
 
+;; em dash to the rescue!
+(global-set-key (kbd "M--") (lambda () (interactive) (insert "—")))
+
 (provide 'hypirion-text)
