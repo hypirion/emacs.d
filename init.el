@@ -47,7 +47,7 @@
 
 (defvar my-packages
   '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang auto-complete
-                 gnuplot highlight-parentheses magit go-mode))
+                 gnuplot highlight-parentheses magit go-mode fill-column-indicator))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
