@@ -12,7 +12,7 @@
 (defun set-preferred-size (frame)
   (if window-system
       (set-frame-size frame 80
-                      (/ (- (x-display-pixel-height) 55)
+                      (/ (- (x-display-pixel-height) 54)
                          (frame-char-height)))))
 (set-preferred-size (selected-frame))
 
