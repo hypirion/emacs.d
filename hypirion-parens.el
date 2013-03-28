@@ -2,6 +2,7 @@
 (require 'paredit)
 
 ;; setup splice-sexp-killing-forward
+;; TODO: This crashes M-n and M-p in nrepl.el =(
 (define-key paredit-mode-map (kbd "M-n") 'paredit-splice-sexp-killing-forward)
 (define-key paredit-mode-map (kbd "M-p") 'paredit-splice-sexp-killing-backward)
 

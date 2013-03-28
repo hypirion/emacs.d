@@ -60,6 +60,7 @@
                 hypirion-clj
                 hypirion-elisp
                 hypirion-erlang
+                hypirion-go
                 hypirion-magit
                 hypirion-text
                 hypirion-x11))

@@ -37,3 +37,9 @@ path + the suffix `/jre/lib/`. (the directory should contain `target.jar`). Also
 on the form shown in my `init.el` file.
 
 And that should be it.
+
+## Go mode
+
+Install gocode (or uncomment the loading of `hypirion-go`) if you want to have
+autocomplete for Go mode. <https://github.com/nsf/gocode> gives installation
+instructions.
