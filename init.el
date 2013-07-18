@@ -1,16 +1,6 @@
-(add-to-list 'load-path "~/.emacs.d/cedet-1.1/common")
-(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
-
-(add-to-list 'load-path "~/.emacs.d/jdee-2.4.0.1/lisp")
-(autoload 'jde-mode "jde" "JDE mode." t)
-(setq auto-mode-alist
-      (append '(("\\.java\\'" . jde-mode)) auto-mode-alist))
 (defun screen-width nil -1)
-(define-obsolete-function-alias 'make-local-hook 'ignore "21.1")
 
-;; Manual config goes here somehow. Should work out of the box.
-(setq jde-global-classpath '("/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/"))
-(setq jde-jdk-registry '(("1.6.0_24" . "/usr/lib/jvm/java-6-openjdk-amd64/")))
+(define-obsolete-function-alias 'make-local-hook 'ignore "21.1")
 
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
