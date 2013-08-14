@@ -32,5 +32,12 @@
 (add-hook 'clojure-mode-hook
           (lambda () (define-key clojure-mode-map (kbd "DEL")
                   'paredit-backward-delete)))
+;; Fix nrepl's input movement
+(add-hook 'clojure-nrepl-mode-hook
+          (lambda ()
+            (define-key nrepl-mode-map (kbd "M-N")
+              'nrepl-next-input)
+            (define-key nrepl-mode-map (kbd "M-P")
+              'nrepl-previous-input)))
 
 (provide 'hypirion-clj)
