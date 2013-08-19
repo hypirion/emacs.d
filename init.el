@@ -43,6 +43,7 @@
                 hypirion-erlang
                 hypirion-go
                 hypirion-magit
+                hypirion-parse
                 hypirion-text
                 hypirion-x11))
   (require file))
