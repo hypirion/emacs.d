@@ -43,6 +43,7 @@
                 hypirion-elisp
                 hypirion-erlang
                 hypirion-go
+                hypirion-haskell
                 hypirion-magit
                 hypirion-parse
                 hypirion-text
