@@ -7,6 +7,8 @@
 
 (define-clojure-indent
   (defroutes 'defun)
+  (defspec 'defun)
+  (for-all 1)
   (GET 2)
   (POST 2)
   (PUT 2)
