@@ -12,3 +12,4 @@ ac-comphist.dat
 /abbrev_defs
 cedet-*/*
 jdee-*/*
+*.elc
