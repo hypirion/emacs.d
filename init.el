@@ -17,7 +17,7 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; put paths onto load path to load *.el files from them
-(add-to-list 'load-path "~/.emacs.d/")
+ (add-to-list 'load-path "~/.emacs.d/hypirion/")
 
 ;; ELPA
 (require 'package)
