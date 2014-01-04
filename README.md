@@ -1,7 +1,11 @@
 # Emacs setup for hyPiRion
 
-I was hoping I could avoid a readme, but setting up CEDET+JDEE is a bit more
-hassle than I thought it would be. So, for CEDET+JDEE, here goes instructions:
+I think the current setup skips CEDET, as it is heavy to load. Feel free to
+attempt to load this one without the struggles mentioned below.
+
+I wished I could avoid creating my own readme, but setting up CEDET+JDEE is a
+bit more hassle than I thought it would be. So, for CEDET+JDEE, here goes
+instructions:
 
 * Dowload CEDET 1.1 and put into your `~/.emacs.d/` directory
 * Dowload JDEE 2.4.0.1 and put it into `~./emacs.d/` directory
@@ -18,7 +22,8 @@ hassle than I thought it would be. So, for CEDET+JDEE, here goes instructions:
   "Cedet maximum version")
 ```
 
-* Delete `jdee-2.4.0.1/lisp/jde.elc`
+* Recompile from emacs, using `byte-recompile-file` on
+  `jdee-2.4.0.1/lisp/jde.el`
 
 Originally found [here][orig].
 [orig]: http://forums.fedoraforum.org/showpost.php?p=1582591&postcount=4
@@ -42,4 +47,5 @@ And that should be it.
 
 Install gocode (or uncomment the loading of `hypirion-go`) if you want to have
 autocomplete for Go mode. <https://github.com/nsf/gocode> gives installation
-instructions.
+instructions. The `go-autocomplete.el` file must be placed within the `hypirion`
+directory.
