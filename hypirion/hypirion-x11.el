@@ -2,8 +2,9 @@
 (if (member "Inconsolata" (font-family-list))
     (set-face-attribute 'default nil :font "Inconsolata-12"))
 
-;; Zenburn
-(load-theme 'zenburn t)
+;; Hickey
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'hickey t)
 
 ;; Remove that darn bell sound
 (setq visible-bell t)

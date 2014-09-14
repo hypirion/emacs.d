@@ -27,7 +27,7 @@
 (package-initialize)
 
 (defvar my-packages
-  '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang auto-complete
+  '(clojure-mode ac-nrepl nrepl paredit erlang auto-complete
                  gnuplot highlight-parentheses magit go-mode
                  fill-column-indicator tuareg))
 
