@@ -44,6 +44,7 @@
                 hypirion-erlang
                 hypirion-go
                 hypirion-haskell
+                hypirion-julia
                 hypirion-magit
                 hypirion-parse
                 hypirion-text
