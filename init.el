@@ -45,6 +45,7 @@
                 hypirion-go
                 hypirion-haskell
                 hypirion-julia
+                hypirion-latex
                 hypirion-magit
                 hypirion-parse
                 hypirion-text
