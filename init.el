@@ -48,6 +48,7 @@
                 hypirion-latex
                 hypirion-magit
                 hypirion-parse
+                hypirion-scheme
                 hypirion-text
                 hypirion-x11))
   (require file))
