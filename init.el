@@ -2,7 +2,8 @@
 
 (define-obsolete-function-alias 'make-local-hook 'ignore "21.1")
 
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode
+                              horizontal-scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
 ;; Remove splash screen
