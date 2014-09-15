@@ -49,3 +49,8 @@ Install gocode (or uncomment the loading of `hypirion-go`) if you want to have
 autocomplete for Go mode. <https://github.com/nsf/gocode> gives installation
 instructions. The `go-autocomplete.el` file must be placed within the `hypirion`
 directory.
+
+## License
+
+Copyright © 2012-2014 Jean Niklas L'orange. Distributed under the GPL 3.0, see
+the file LICENSE.

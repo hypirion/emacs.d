@@ -49,7 +49,7 @@
 (package-initialize)
 
 (defvar my-packages
-  '(clojure-mode ac-nrepl nrepl paredit zenburn-theme erlang auto-complete
+  '(clojure-mode ac-nrepl nrepl paredit erlang auto-complete
                  gnuplot highlight-parentheses magit go-mode
                  fill-column-indicator tuareg))
 
@@ -66,8 +66,12 @@
                 hypirion-erlang
                 hypirion-go
 ;                hypirion-haskell
+                hypirion-haskell
+                hypirion-julia
+                hypirion-latex
                 hypirion-magit
                 hypirion-parse
+                hypirion-scheme
                 hypirion-text
                 hypirion-x11))
   (require file))
