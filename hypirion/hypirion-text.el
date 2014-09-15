@@ -70,9 +70,10 @@
 (global-set-key (kbd "M--") (lambda () (interactive) (insert "—")))
 
 ;; Highlight column 80
-(require 'fill-column-indicator)
+(require 'whitespace)
+(setq whitespace-line-column 80) ;; todo: set this to fill-column size
+(setq whitespace-style '(face lines-tail))
 
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
+(global-whitespace-mode +1)
 
 (provide 'hypirion-text)

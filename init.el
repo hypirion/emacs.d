@@ -51,7 +51,7 @@
 (defvar my-packages
   '(clojure-mode ac-nrepl nrepl paredit erlang auto-complete
                  gnuplot highlight-parentheses magit go-mode
-                 fill-column-indicator tuareg))
+                 tuareg))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
