@@ -75,3 +75,5 @@
                 hypirion-text
                 hypirion-x11))
   (require file))
+
+(put 'upcase-region 'disabled nil)
