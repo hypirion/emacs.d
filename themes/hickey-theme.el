@@ -30,10 +30,12 @@
       (hickey-lightest-gray  "#999999")
       (hickey-comment-slate  "#505C63")
       (hickey-orange         "#F38630")
+      (hickey-weak-orange    "#F8B580")
       (hickey-light-slate    "#465459")
       (hickey-dark-slate     "#161A1F")
       (hickey-light-blue     "#A7DBD8")
       (hickey-strong-green   "#AEE239")
+      (hickey-weak-green     "#7FAD19")
       (hickey-subtle-blue    "#A7DBD8")
       (hickey-dirty-white    "#F8F8F0")
       (hickey-lighter-orange "#FD971F"))
@@ -66,7 +68,7 @@
    ;; Keywords
    `(font-lock-keyword-face ((t (:foreground ,hickey-subtle-blue))))
    ;; Strings
-   `(font-lock-string-face ((t (:foreground ,hickey-dirty-white))))
+   `(font-lock-string-face ((t (:foreground ,hickey-weak-orange))))
    ;; Variables
    `(font-lock-variable-name-face ((t (:foreground ,hickey-lighter-orange))))
    `(font-lock-type-face ((t (:foreground ,hickey-lightest-gray))))
