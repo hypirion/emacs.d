@@ -30,8 +30,7 @@
 
 (defvar my-packages
   '(clojure-mode ac-nrepl nrepl paredit erlang auto-complete haskell-mode
-                 structured-haskell-mode ghc
-                 gnuplot highlight-parentheses magit go-mode
+                 shm ghc gnuplot highlight-parentheses magit go-mode
                  tuareg))
 
 (dolist (p my-packages)
