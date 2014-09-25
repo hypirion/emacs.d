@@ -13,17 +13,23 @@
   (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
   (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
   (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
-  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
+  (define-key haskell-mode-map (kbd "C-c C-o") 'haskell-compile)))
 (eval-after-load 'haskell-cabal '(progn
   (define-key haskell-cabal-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
   (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
+  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-o") 'haskell-compile)))
+
+(custom-set-variables '(haskell-process-type 'cabal-repl))
 
 (autoload 'ghc-init "ghc" nil t)
-(defun el-get-ghc-mod-hook ()
+(autoload 'ghc-debug "ghc" nil t)
+
+(defun hypirion-ghc-mod-hook ()
   (ghc-init)
   (flymake-mode))
-(add-hook 'haskell-mode-hook 'el-get-ghc-mod-hook)
+(add-hook 'haskell-mode-hook 'hypirion-ghc-mod-hook)
 
 (provide 'hypirion-haskell)
