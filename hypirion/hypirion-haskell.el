@@ -1,6 +1,6 @@
 (require 'haskell-mode)
 
-(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
 (custom-set-variables
   '(haskell-process-suggest-remove-import-lines t)
