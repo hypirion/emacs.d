@@ -19,10 +19,4 @@
 
 (add-hook 'after-make-frame-functions 'set-preferred-size)
 
-(require 'windmove)
-(global-set-key (kbd "s-b") 'windmove-left)
-(global-set-key (kbd "s-f") 'windmove-right)
-(global-set-key (kbd "s-p") 'windmove-up)
-(global-set-key (kbd "s-n") 'windmove-down)
-
 (provide 'hypirion-x11)
