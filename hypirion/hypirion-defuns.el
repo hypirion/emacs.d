@@ -9,4 +9,7 @@
                    "<M-down>"))
   (eval `(global-unset-key (kbd ,kbd-str))))
 
+(global-set-key (kbd "<up>") (lambda () (interactive) (scroll-down 1)))
+(global-set-key (kbd "<down>") (lambda () (interactive) (scroll-up 1)))
+
 (provide 'hypirion-defuns)
