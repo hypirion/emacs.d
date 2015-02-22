@@ -1,10 +1,10 @@
 ;; Default font - (Seems to work properly)
 (if (member "Inconsolata" (font-family-list))
-    (set-face-attribute 'default nil :font "Inconsolata-12"))
+    (set-face-attribute 'default nil :font "Inconsolata-10"))
 
 ;; Hickey
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'hickey t)
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'sanityinc-solarized-light 't)
 
 ;; Remove that darn bell sound
 (setq visible-bell t)
