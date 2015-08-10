@@ -1,5 +1,6 @@
 (defun screen-width nil -1)
 
+(setq magit-last-seen-setup-instructions "1.4.0")
 (define-obsolete-function-alias 'make-local-hook 'ignore "21.1")
 
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode
