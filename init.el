@@ -39,9 +39,8 @@
 (package-initialize)
 
 (defvar my-packages
-  '(clojure-mode ac-nrepl nrepl paredit erlang auto-complete haskell-mode
-                 shm ghc gnuplot highlight-parentheses magit go-mode
-                 tuareg))
+  '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
+                 highlight-parentheses magit go-mode tuareg))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

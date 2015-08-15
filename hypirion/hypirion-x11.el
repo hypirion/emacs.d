@@ -1,6 +1,6 @@
 ;; Default font - (Seems to work properly)
 (if (member "Inconsolata" (font-family-list))
-    (set-face-attribute 'default nil :font "Inconsolata-10"))
+    (set-face-attribute 'default nil :font "Inconsolata-9"))
 
 ;; Hickey
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
