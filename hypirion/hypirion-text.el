@@ -48,7 +48,7 @@
 (setq org-todo-keywords
       '((sequence "TODO" "DOING" "|" "DONE" "CANCELLED")))
 
-(setq org-todo-keyword-faces 
+(setq org-todo-keyword-faces
       '(("DOING" . (:foreground "goldenrod" :weight bold))
 	("CANCELLED" . (:foreground "dark green" :background "seashell"
 				    :weight bold))))
@@ -72,8 +72,17 @@
 ;; Highlight column 80
 (require 'whitespace)
 (setq whitespace-line-column 80) ;; todo: set this to fill-column size
-(setq whitespace-style '(face lines-tail))
+(setq whitespace-style '(tabs tab-mark face trailing lines-tail))
+(setq whitespace-tab 'hypirion-whitespace-tab)
 
-(global-whitespace-mode +1)
+(defface hypirion-whitespace-tab
+  '((((class color) (background dark))
+     (:foreground "grey25"))
+    (((class color) (background light))
+     (:foreground "lightgray"))
+    (t (:inverse-video t)))
+  "Just lighter colour on tabs")
+
+(global-whitespace-mode)
 
 (provide 'hypirion-text)

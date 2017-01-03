@@ -17,7 +17,7 @@
 	      '("red1" "magenta2" "purple" "dodgerblue2" "cyan2" "springgreen2"
           "green2" "yellow" "darkorange1"))
 
-(set-face-attribute 'hl-paren-face nil :weight 'bold)
+;(set-face-attribute 'hl-paren-face nil :weight 'bold)
 
 ;; Shiny parens all the time
 (define-globalized-minor-mode global-highlight-parentheses-mode

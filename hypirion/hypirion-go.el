@@ -3,7 +3,10 @@
 (require 'auto-complete-config)
 (require 'go-mode)
 
+(ac-config-default)
+
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 
