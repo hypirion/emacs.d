@@ -84,5 +84,7 @@
   "Just lighter colour on tabs")
 
 (global-whitespace-mode)
+(global-hl-line-mode)
+(global-linum-mode)
 
 (provide 'hypirion-text)
