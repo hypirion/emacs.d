@@ -1,3 +1,6 @@
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 (defun screen-width nil -1)
 
 (setq backup-directory-alist
@@ -47,11 +50,11 @@
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
                  highlight-parentheses magit go-mode tuareg rust-mode rustfmt
-                 company moe-theme))
+                 company moe-theme exec-path-from-shell))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
-      (package-install p)))
+    (package-install p)))
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
@@ -72,25 +75,11 @@
                 hypirion-x11))
   (require file))
 
-
 (put 'upcase-region 'disabled nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-indent-tabs-mode t)
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote cabal-repl))
- '(package-selected-packages
-   (quote
-    (moe-theme systemd coffee-mode handlebars-mode yaml-mode dockerfile-mode company racer cargo flymake-rust rustfmt rust-mode toml-mode cider markdown-mode tuareg shm paredit magit highlight-parentheses go-mode gnuplot ghc erlang color-theme-sanityinc-solarized clojure-mode auto-complete))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (put 'downcase-region 'disabled nil)
+
+(when (memq window-system '(mac ns x))
+  (setq exec-path-from-shell-arguments '("-l" "-i"))
+  ;; Go stuff to make godef and friends happy
+  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOPATH" "GOROOT"))
+  (exec-path-from-shell-initialize))
