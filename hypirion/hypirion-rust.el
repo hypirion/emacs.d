@@ -1,8 +1,8 @@
 (require 'rust-mode)
-(require 'rustfmt)
+;(require 'rustfmt)
 (require 'company)
 
-(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
+;(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)

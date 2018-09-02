@@ -1,6 +1,3 @@
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
-
 (defun screen-width nil -1)
 
 (setq backup-directory-alist
@@ -45,12 +42,11 @@
                   ("elpa" . "http://tromey.com/elpa/")
                   ("melpa" . "http://melpa.milkbox.net/packages/")))
   (add-to-list 'package-archives source))
-(package-initialize)
 
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
-                 highlight-parentheses magit go-mode tuareg rust-mode rustfmt
-                 company moe-theme exec-path-from-shell))
+                 highlight-parentheses magit go-mode tuareg rust-mode company
+                 moe-theme exec-path-from-shell))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
