@@ -52,5 +52,5 @@ directory.
 
 ## License
 
-Copyright © 2012-2014 Jean Niklas L'orange. Distributed under the GPL 3.0, see
+Copyright © 2012-2019 Jean Niklas L'orange. Distributed under the GPL 3.0, see
 the file LICENSE.
