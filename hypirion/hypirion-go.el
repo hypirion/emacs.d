@@ -1,4 +1,3 @@
-;; Well, that wasn't hard.
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (require 'go-mode)
@@ -8,11 +7,12 @@
 
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
+(setq gofmt-command "goimports")
 
 (defun hypirion-go-mode-hook ()
-  ; Call Gofmt before saving
+                                        ; Call goimports before saving
   (add-hook 'before-save-hook 'gofmt-before-save)
-  ; Godef jump key binding
+                                        ; Godef jump key binding
   (local-set-key (kbd "M-.") 'godef-jump)
   (local-set-key (kbd "M-*") 'pop-tag-mark))
 
