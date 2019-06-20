@@ -9,6 +9,7 @@
 (add-hook 'racer-mode-hook #'company-mode)
 
 (defun hypirion-rust-mode-hook ()
+  (local-set-key (kbd "C-c C-d") 'racer-describe)
   (local-set-key (kbd "C-c C-j") 'racer-find-definition)
   (local-set-key (kbd "M-.") 'racer-find-definition)
   (local-set-key (kbd "M-*") 'pop-tag-mark))
