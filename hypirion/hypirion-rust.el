@@ -2,11 +2,20 @@
 ;(require 'rustfmt)
 (require 'company)
 
-;(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
+(setq rust-format-on-save t)
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
+
+(defun hypirion-rust-mode-hook ()
+  (local-set-key (kbd "C-c C-j") 'racer-find-definition)
+  (local-set-key (kbd "M-.") 'racer-find-definition)
+  (local-set-key (kbd "M-*") 'pop-tag-mark))
+
+
+(add-hook 'rust-mode-hook 'hypirion-rust-mode-hook)
+
 
 (defun hypirion-rust-indent-or-complete-common ()
   "Indent the current line or region, or complete the common part."
