@@ -48,10 +48,14 @@
                  highlight-parentheses magit go-mode tuareg rust-mode company
                  moe-theme exec-path-from-shell))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-refresh-contents)
-    (package-install p)))
+
+(let ((refreshed-contents nil))
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (when (not refreshed-contents)
+        (setq refreshed-contents)
+        (package-refresh-contents))
+      (package-install p))))
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
