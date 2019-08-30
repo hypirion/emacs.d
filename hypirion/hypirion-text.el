@@ -60,7 +60,7 @@
 (defun magit-fill-column ()
   (setq fill-column 72))
 
-(add-hook 'magit-log-edit-mode-hook 'magit-fill-column)
+(add-hook 'git-commit-mode-hook 'magit-fill-column)
 
 ;; hook in gnuplot mode when editing
 (require 'gnuplot)
