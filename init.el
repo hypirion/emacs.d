@@ -38,8 +38,7 @@
 
 ;; ELPA
 (require 'package)
-(dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
-                  ("elpa" . "http://tromey.com/elpa/")
+(dolist (source '(("elpa" . "http://tromey.com/elpa/")
                   ("melpa" . "http://melpa.milkbox.net/packages/")))
   (add-to-list 'package-archives source))
 
@@ -48,14 +47,14 @@
                  highlight-parentheses magit go-mode tuareg rust-mode company
                  moe-theme exec-path-from-shell))
 
-
+(package-initialize)
 (let ((refreshed-contents nil))
   (dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (when (not refreshed-contents)
-        (setq refreshed-contents)
-        (package-refresh-contents))
-      (package-install p))))
+	(when (not (package-installed-p p))
+	       (when (not refreshed-contents)
+			    (setq refreshed-contents t)
+			      (package-refresh-contents))
+	             (package-install p))))
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
