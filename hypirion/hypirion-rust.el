@@ -1,5 +1,5 @@
 (require 'rust-mode)
-;(require 'rustfmt)
+(require 'racer)
 (require 'company)
 
 (setq rust-format-on-save t)

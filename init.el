@@ -9,14 +9,6 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 (define-obsolete-function-alias 'make-local-hook 'ignore "21.1")
 
-;; Fixup path env as zsh and emacs apparently can't dance together.
-(let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
-  (setenv "PATH" path)
-  (setq exec-path
-        (append
-         (split-string-and-unquote path ":")
-         exec-path)))
-
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode
                               horizontal-scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -44,17 +36,17 @@
 
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
-                 highlight-parentheses magit go-mode tuareg rust-mode company
+                 elm-mode highlight-parentheses magit go-mode tuareg rust-mode company
                  moe-theme exec-path-from-shell))
 
 (package-initialize)
 (let ((refreshed-contents nil))
   (dolist (p my-packages)
-	(when (not (package-installed-p p))
-	       (when (not refreshed-contents)
-			    (setq refreshed-contents t)
-			      (package-refresh-contents))
-	             (package-install p))))
+    (when (not (package-installed-p p))
+      (when (not refreshed-contents)
+        (setq refreshed-contents t)
+        (package-refresh-contents))
+      (package-install p))))
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
@@ -62,6 +54,7 @@
                 hypirion-clisp
                 hypirion-clj
                 hypirion-elisp
+                hypirion-elm
                 ;;hypirion-erlang
                 hypirion-go
                 hypirion-haskell
