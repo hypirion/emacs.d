@@ -36,7 +36,7 @@
 
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
-                 elm-mode highlight-parentheses magit go-mode tuareg rust-mode company
+                 elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
                  moe-theme exec-path-from-shell))
 
 (package-initialize)

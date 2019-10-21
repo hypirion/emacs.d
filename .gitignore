@@ -13,3 +13,4 @@ ac-comphist.dat
 cedet-*/*
 jdee-*/*
 *.elc
+/transient
