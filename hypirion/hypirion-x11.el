@@ -1,5 +1,5 @@
 ;; Default font - (Seems to work properly)
-(set-face-attribute 'default nil :font "mononoki-9")
+(set-face-attribute 'default nil :font "cascadiacodepl-11")
 
 ;; Hickey
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
