@@ -1,3 +1,5 @@
+(set-background-color "gray19")
+
 (defun screen-width nil -1)
 
 (setq backup-directory-alist
@@ -40,6 +42,7 @@
                  moe-theme exec-path-from-shell))
 
 (package-initialize)
+
 (let ((refreshed-contents nil))
   (dolist (p my-packages)
     (when (not (package-installed-p p))
