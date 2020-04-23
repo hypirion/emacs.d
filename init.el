@@ -39,7 +39,7 @@
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
                  elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
-                 moe-theme exec-path-from-shell))
+                 gruvbox-theme exec-path-from-shell))
 
 (package-initialize)
 
@@ -90,7 +90,7 @@
  '(haskell-process-type (quote cabal-repl))
  '(package-selected-packages
    (quote
-    (yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot ghc shm haskell-mode auto-complete erlang paredit clojure-mode))))
+    (graphviz-dot-mode gruvbox-theme dockerfile-mode yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot ghc shm haskell-mode auto-complete erlang paredit clojure-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
