@@ -21,6 +21,9 @@
 
 (add-hook 'rust-mode-hook 'hypirion-rust-mode-hook)
 
+(define-key rust-mode-map (kbd "C-c C-c") 'rust-run-clippy)
+(define-key rust-mode-map (kbd "C-c C-o") 'rust-compile)
+
 
 (defun hypirion-rust-indent-or-complete-common ()
   "Indent the current line or region, or complete the common part."
