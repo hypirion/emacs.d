@@ -30,11 +30,9 @@
 ;; put paths onto load path to load *.el files from them
 (add-to-list 'load-path "~/.emacs.d/hypirion/")
 
-;; ELPA
+;; MELPA
 (require 'package)
-(dolist (source '(("elpa" . "http://tromey.com/elpa/")
-                  ("melpa" . "http://melpa.milkbox.net/packages/")))
-  (add-to-list 'package-archives source))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
