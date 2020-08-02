@@ -37,7 +37,7 @@
 (defvar my-packages
   '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
                  elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
-                 gruvbox-theme exec-path-from-shell))
+                 gruvbox-theme exec-path-from-shell projectile ivy))
 
 (package-initialize)
 
@@ -48,6 +48,12 @@
         (setq refreshed-contents t)
         (package-refresh-contents))
       (package-install p))))
+
+
+(projectile-mode +1)
+(ivy-mode)
+(define-key projectile-mode-map (kbd "s-o") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c o") 'projectile-command-map)
 
 (dolist (file '(hypirion-defuns
                 hypirion-parens
