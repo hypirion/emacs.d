@@ -1,11 +1,7 @@
-(require 'go-autocomplete)
-(require 'auto-complete-config)
+(require 'company)
+(require 'company-go)
 (require 'go-mode)
 (require 'golint)
-
-(ac-config-default)
-
-(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
 (setq gofmt-command "goimports")
 

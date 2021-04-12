@@ -35,7 +35,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (defvar my-packages
-  '(clojure-mode paredit erlang auto-complete haskell-mode shm ghc gnuplot
+  '(clojure-mode paredit erlang company company-go haskell-mode shm ghc gnuplot
                  elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
                  gruvbox-theme exec-path-from-shell projectile ivy))
 
