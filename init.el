@@ -37,7 +37,7 @@
 (defvar my-packages
   '(clojure-mode paredit erlang company company-go haskell-mode shm ghc gnuplot
                  elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
-                 gruvbox-theme exec-path-from-shell projectile ivy
+                 gruvbox-theme exec-path-from-shell projectile ivy lsp-mode
                  tide web-mode js2-mode flycheck prettier-js))
 
 (package-initialize)

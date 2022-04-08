@@ -1,31 +1,22 @@
-(require 'company)
-(require 'company-go)
 (require 'go-mode)
-(require 'golint)
+(require 'lsp-mode)
 
-(setq gofmt-command "goimports")
 
 (defun hypirion-go-mode-hook ()
-                                        ; Call goimports before saving
-  (add-hook 'before-save-hook 'gofmt-before-save)
-                                        ; Godef jump key binding
-  (local-set-key (kbd "M-.") 'godef-jump)
+                                        ; Override godef key bindings
+  (local-set-key (kbd "C-c C-d") 'lsp-describe-thing-at-point)
+  (local-set-key (kbd "M-.") 'lsp-find-definition)
+  (local-set-key (kbd "C-c C-j") 'lsp-find-definition)
   (local-set-key (kbd "M-*") 'pop-tag-mark))
 
-(add-hook 'go-mode-hook 'hypirion-go-mode-hook)
+(add-hook 'go-mode-hook #'hypirion-go-mode-hook)
+(add-hook 'go-mode-hook #'lsp-deferred)
 
-(defun golint-after-save-hook ()
-  (when (eq major-mode 'go-mode)
-    (golint)))
-(add-hook 'after-save-hook 'golint-after-save-hook)
-
-(setq compilation-exit-message-function
-      (lambda (status code msg)
-        (when (and (eq status 'exit) (zerop code))
-          (let ((compilation-buffer-name (golint-buffer-name nil)))
-            (bury-buffer compilation-buffer-name)
-            (delete-window (get-buffer-window (get-buffer compilation-buffer-name)))))
-        ;; Always return the anticipated result of compilation-exit-message-function
-        (cons msg code)))
+;; Set up before-save hooks to format buffer and add/delete imports.
+;; Make sure you don't have other gofmt/goimports hooks enabled.
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
 (provide 'hypirion-go)
