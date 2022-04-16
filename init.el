@@ -35,10 +35,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (defvar my-packages
-  '(clojure-mode paredit erlang company company-go haskell-mode shm ghc gnuplot
-                 elm-mode highlight-parentheses magit go-mode tuareg rust-mode racer company
-                 gruvbox-theme exec-path-from-shell projectile ivy lsp-mode
-                 tide web-mode js2-mode flycheck prettier-js))
+  '(paredit company company-go shm gnuplot
+            elm-mode highlight-parentheses magit go-mode tuareg rust-mode
+            racer company gruvbox-theme exec-path-from-shell projectile ivy
+            lsp-mode tide web-mode js2-mode flycheck prettier-js))
 
 (package-initialize)
 
@@ -59,19 +59,13 @@
 (dolist (file '(hypirion-defuns
                 hypirion-parens
                 hypirion-c
-                hypirion-clisp
-                hypirion-clj
                 hypirion-elisp
                 hypirion-elm
-                ;;hypirion-erlang
                 hypirion-go
-                hypirion-haskell
-                hypirion-julia
                 hypirion-latex
                 hypirion-magit
                 hypirion-parse
                 hypirion-rust
-                hypirion-scheme
                 hypirion-text
                 hypirion-ts
                 hypirion-x11))
@@ -90,13 +84,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote cabal-repl))
  '(package-selected-packages
    (quote
-    (graphviz-dot-mode gruvbox-theme dockerfile-mode yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot ghc shm haskell-mode auto-complete erlang paredit clojure-mode))))
+    (graphviz-dot-mode gruvbox-theme dockerfile-mode yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot shm haskell-mode erlang paredit clojure-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
