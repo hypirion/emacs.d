@@ -18,6 +18,6 @@
 (global-set-key (kbd "s-v") 'find-alternate-file)
 (global-set-key (kbd "s-g") 'keyboard-escape-quit)
 (global-set-key (kbd "s-o s-o") 'other-window)
-(global-set-key (kbd "s-b") 'ivy-switch-buffer) ;; really M-s-b
+(global-set-key (kbd "M-s-b") 'ivy-switch-buffer) ;; really M-s-b
 
 (provide 'hypirion-defuns)

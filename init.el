@@ -65,6 +65,7 @@
                 hypirion-latex
                 hypirion-magit
                 hypirion-parse
+                hypirion-py
                 hypirion-rust
                 hypirion-text
                 hypirion-ts
