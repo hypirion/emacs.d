@@ -19,4 +19,10 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
+(setq lsp-completion-provider :none)
+(lsp-register-custom-settings
+ '(("gopls.staticcheck" t t)))
+;;(setq lsp-completion-show-detail nil)
+;;(setq lsp-completion-show-kind nil)
+
 (provide 'hypirion-go)

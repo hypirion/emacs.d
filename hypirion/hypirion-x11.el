@@ -1,5 +1,5 @@
 ;; Default font - (Seems to work properly)
-(set-face-attribute 'default nil :font "cascadiacodepl-11")
+(set-face-attribute 'default nil :font "comiccode-21")
 
 
 ;; Hickey
