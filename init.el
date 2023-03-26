@@ -36,9 +36,9 @@
 
 (defvar my-packages
   '(paredit company company-go shm gnuplot
-            elm-mode highlight-parentheses magit go-mode tuareg rust-mode
-            racer company gruvbox-theme exec-path-from-shell projectile ivy
-            lsp-mode tide web-mode js2-mode flycheck prettier-js))
+            elm-mode highlight-parentheses magit go-mode tuareg rustic
+            company gruvbox-theme exec-path-from-shell projectile ivy
+            lsp-mode tide web-mode js2-mode flycheck prettier-js use-package))
 
 (package-initialize)
 
@@ -86,8 +86,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (graphviz-dot-mode gruvbox-theme dockerfile-mode yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot shm haskell-mode erlang paredit clojure-mode))))
+   '(use-package rustic graphviz-dot-mode gruvbox-theme dockerfile-mode yaml-mode elm-mode racer markdown-mode exec-path-from-shell moe-theme company rust-mode tuareg go-mode magit highlight-parentheses gnuplot shm haskell-mode erlang paredit clojure-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
