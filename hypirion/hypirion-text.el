@@ -85,6 +85,6 @@
 
 (global-whitespace-mode)
 (global-hl-line-mode)
-(global-linum-mode)
+(global-display-line-numbers-mode 1)
 
 (provide 'hypirion-text)

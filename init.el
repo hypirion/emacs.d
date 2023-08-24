@@ -62,6 +62,7 @@
                 hypirion-elisp
                 hypirion-elm
                 hypirion-go
+                hypirion-js
                 hypirion-latex
                 hypirion-magit
                 hypirion-parse
