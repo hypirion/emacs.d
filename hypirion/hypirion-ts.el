@@ -64,4 +64,7 @@
 (add-hook 'tide-mode-hook #'hypirion-ts-mode-hook)
 
 
+(setq typescript-indent-level 2)
+
+
 (provide 'hypirion-ts)
