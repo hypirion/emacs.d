@@ -1,6 +1,9 @@
 \#*
 *~
 .session
+/session.*
+/tramp
+/url
 /elpa/*
 auto-save-list/*
 ac-comphist.dat
