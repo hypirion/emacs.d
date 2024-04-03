@@ -36,8 +36,8 @@
 
 (defvar my-packages
   '(paredit company company-go shm gnuplot
-            elm-mode highlight-parentheses magit go-mode tuareg rustic
-            company gruvbox-theme exec-path-from-shell projectile ivy
+            elm-mode highlight-parentheses magit go-mode groovy-mode groovy-imports
+            tuareg rustic gruvbox-theme exec-path-from-shell projectile ivy
             lsp-mode tide web-mode js2-mode flycheck prettier-js use-package))
 
 (package-initialize)
@@ -62,6 +62,7 @@
                 hypirion-elisp
                 hypirion-elm
                 hypirion-go
+                hypirion-groovy
                 hypirion-js
                 hypirion-latex
                 hypirion-magit
