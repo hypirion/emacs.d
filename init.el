@@ -59,6 +59,7 @@
 (dolist (file '(hypirion-defuns
                 hypirion-parens
                 hypirion-c
+                hypirion-clj
                 hypirion-elisp
                 hypirion-elm
                 hypirion-go
