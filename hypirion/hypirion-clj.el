@@ -24,5 +24,6 @@
              clojurex-mode))
   (add-to-list 'lsp-language-id-configuration `(,m . "clojure")))
 
+(setq clojure-indent-style 'align-arguments)
 
 (provide 'hypirion-clj)
